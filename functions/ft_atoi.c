@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 20:04:12 by leon              #+#    #+#             */
-/*   Updated: 2023/09/10 21:13:13 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/10 21:45:36 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,6 @@ int	ft_atoi(char *str)
 //     printf("atoi: expected output: -123 | %d\n", atoi("     -123"));
 //     printf("ft_atoi: expected output: 0 | %d\n", ft_atoi("0"));
 //     printf("atoi: expected output: 0 | %d\n", atoi("0"));
-//     printf("ft_atoi: expected output: 2147483647 | %d\n", ft_atoi("2147483647"));
-//     printf("atoi: expected output: 2147483647 | %d\n", atoi("2147483647"));
-//     printf("ft_atoi: expected output: -2147483648 | %d\n", ft_atoi("-2147483648"));
-//     printf("atoi: expected output: -2147483648 | %d\n", atoi("-2147483648"));
 //     printf("ft_atoi: expected output: 123 | %d\n", ft_atoi("  123"));
 //     printf("atoi: expected output: 123 | %d\n", atoi("  123"));
 //     printf("ft_atoi: expected output: 123 | %d\n", ft_atoi("123 456"));
