@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 21:26:24 by leon              #+#    #+#             */
-/*   Updated: 2023/09/11 22:05:55 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/12 00:10:49 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_strtrim(char const *s)
 // {
 //     char *str1 = "   Hello, World!   ";
 //     char *str2 = "\t\t\t12345\t\t\t";
-//     char *str3 = "\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\n\n\n";
+//     char *str3 = "\n\n\nLorem ipsum\n\n\n";
 //     char *str4 = " \t\n  \t";
 //     char *str5 = "NoSpacesHere";
 //     char *result1 = ft_strtrim(str1);
@@ -55,11 +55,11 @@ char	*ft_strtrim(char const *s)
 //     char *result3 = ft_strtrim(str3);
 //     char *result4 = ft_strtrim(str4);
 //     char *result5 = ft_strtrim(str5);
-//     printf("ft_strtrim: expected output: \"Hello, World!\" | \"%s\"\n", result1);
-//     printf("ft_strtrim: expected output: \"12345\" | \"%s\"\n", result2);
-//     printf("ft_strtrim: expected output: \"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\" | \"%s\"\n", result3);
-//     printf("ft_strtrim: expected output: \"\" | \"%s\"\n", result4);
-//     printf("ft_strtrim: expected output: \"NoSpacesHere\" | \"%s\"\n", result5);
+//     printf("expected output: \"Hello, World!\" | \"%s\"\n", result1);
+//     printf("expected output: \"12345\" | \"%s\"\n", result2);
+//     printf("expected output: \"Lorem ipsum\" | \"%s\"\n", result3);
+//     printf("expected output: \"\" | \"%s\"\n", result4);
+//     printf("expected output: \"NoSpacesHere\" | \"%s\"\n", result5);
 //     free(result1);
 //     free(result2);
 //     free(result3);
