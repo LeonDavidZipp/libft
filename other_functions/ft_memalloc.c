@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 23:07:53 by leon              #+#    #+#             */
-/*   Updated: 2023/09/11 11:57:09 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/11 21:22:59 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,9 @@ void	*ft_memalloc(size_t size)
 //     }
 //     free(test1);
 //     // Test 2: Allocation Failure
-//     // This test might not always trigger a failure, depending on system capabilities.
-//     char *test2 = (char *)ft_memalloc((size_t)-1);  // Trying to allocate the largest possible size
+//     char *test2 = (char *)ft_memalloc((size_t)-1);
 //     if (!test2) {
-//         printf("Test 2: Passed! (Expected failure for massive allocation)\n");
+//         printf("Test 2: Passed! (Expected failure)\n");
 //     } else {
 //         printf("Test 2: Unexpected success for massive allocation!\n");
 //         free(test2);

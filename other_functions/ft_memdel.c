@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 11:42:52 by leon              #+#    #+#             */
-/*   Updated: 2023/09/11 11:53:23 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/11 18:27:56 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,17 @@ void	ft_memdel(void **ap)
 //     }
 //     ft_memdel((void **)&test1);
 //     if (!test1) {
-//         printf("Test 1: Passed! Memory was freed and pointer was set to NULL.\n");
+//         printf("Test 1: Passed!\n);
 //     } else {
-//         printf("Test 1: Failed! Pointer was not set to NULL after ft_memdel.\n");
+//         printf("Test 1: Failed!\n);
 //     }
 //     // Test 2: Null Pointer Test
 //     char *test2 = NULL;
 //     ft_memdel((void **)&test2);
 //     if (!test2) {
-//         printf("Test 2: Passed! Function correctly handled a NULL pointer.\n");
+//         printf("Test 2: Passed!\n);
 //     } else {
-//         printf("Test 2: Failed! Pointer was modified by ft_memdel when it shouldn't have been.\n");
+//         printf("Test 2: Failed!\n");
 //     }
 //     return (0);
 // }
