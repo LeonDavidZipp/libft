@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:55:10 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 17:26:01 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/12 17:58:59 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmap(char const *s, char (*f)(char))
 {
 	char	*result;
-	int		len;
+	size_t	len;
 
 	if (!s || !f)
 		return (NULL);

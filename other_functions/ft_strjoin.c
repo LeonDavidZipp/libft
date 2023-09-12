@@ -6,15 +6,15 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:50:51 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 17:17:01 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/12 17:59:38 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-static int	ft_getlen(char const *str)
+static size_t	ft_getlen(char const *str)
 {
-	unsigned int	len;
+	size_t	len;
 
 	len = 0;
 	while (str[len])
@@ -24,9 +24,9 @@ static int	ft_getlen(char const *str)
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*result;
-	unsigned int	len1;
-	unsigned int	len2;
+	char	*result;
+	size_t	len1;
+	size_t	len2;
 
 	len1 = ft_getlen(s1);
 	len2 = ft_getlen(s2);
