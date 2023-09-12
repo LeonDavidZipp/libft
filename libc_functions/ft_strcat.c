@@ -6,11 +6,11 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 17:17:21 by lzipp             #+#    #+#             */
-/*   Updated: 2023/09/10 19:59:45 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/12 17:40:50 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, const char *src)
 {
 	int	i;
 	int	len;

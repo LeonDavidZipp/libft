@@ -6,13 +6,13 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 20:04:12 by leon              #+#    #+#             */
-/*   Updated: 2023/09/10 21:45:36 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/12 17:39:46 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int		i;
 	int		sign;

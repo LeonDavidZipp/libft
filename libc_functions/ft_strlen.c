@@ -6,15 +6,15 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 19:47:07 by leon              #+#    #+#             */
-/*   Updated: 2023/09/10 19:48:07 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/12 17:47:13 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str);
+#include <stdlib.h>
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	while (str[len])

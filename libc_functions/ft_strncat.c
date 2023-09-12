@@ -6,14 +6,16 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 11:37:49 by lzipp             #+#    #+#             */
-/*   Updated: 2023/09/10 20:01:36 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/12 17:48:44 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+#include <stdlib.h>
+
+char	*ft_strncat(char *dest, const char *src, size_t nb)
 {
-	unsigned int	i;
-	unsigned int	len;
+	size_t	i;
+	size_t	len;
 
 	i = 0;
 	len = 0;

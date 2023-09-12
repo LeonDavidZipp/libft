@@ -6,13 +6,15 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 11:53:35 by lzipp             #+#    #+#             */
-/*   Updated: 2023/09/10 20:00:21 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/12 17:45:20 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_getlen(char	*str)
+#include <stdlib.h>
+
+static size_t	ft_getlen(char	*str)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	while (str[len])
@@ -20,11 +22,11 @@ int	ft_getlen(char	*str)
 	return (len);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	len_dest;
-	unsigned int	len_src;
-	int				i;
+	size_t	len_dest;
+	size_t	len_src;
+	size_t	i;
 
 	len_dest = ft_getlen(dest);
 	len_src = ft_getlen(src);
