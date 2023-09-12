@@ -6,13 +6,13 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 00:12:22 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 10:11:03 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/12 10:30:43 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_get_len(long nb)
+static int	ft_get_len(long nb)
 {
 	int	len;
 

@@ -6,13 +6,13 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 22:07:01 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 00:06:29 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/12 10:31:42 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_count_words(char const *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
 	int		i;
 	int		count;
