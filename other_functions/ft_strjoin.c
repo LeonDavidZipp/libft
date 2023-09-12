@@ -6,13 +6,13 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:50:51 by leon              #+#    #+#             */
-/*   Updated: 2023/09/11 18:26:50 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/12 17:17:01 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_getlen(char const *str)
+static int	ft_getlen(char const *str)
 {
 	unsigned int	len;
 
