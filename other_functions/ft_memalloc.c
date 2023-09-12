@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 23:07:53 by leon              #+#    #+#             */
-/*   Updated: 2023/09/11 21:22:59 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/12 17:55:12 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memalloc(size_t size)
 {
 	char	*c_ptr;
 	void	*ptr;
-	int		i;
+	size_t	i;
 
 	c_ptr = (char *)malloc(size * sizeof(char));
 	if (!c_ptr)

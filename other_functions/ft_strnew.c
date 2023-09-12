@@ -6,16 +6,16 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 11:54:04 by leon              #+#    #+#             */
-/*   Updated: 2023/09/11 12:00:24 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/12 17:55:54 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
 
 char	*ft_strnew(size_t size)
 {
 	char	*str;
-	int		i;
+	size_t	i;
 
 	str = (char *)malloc((size + 1) * sizeof(char));
 	if (!str)
