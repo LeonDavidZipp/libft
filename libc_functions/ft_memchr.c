@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 21:56:10 by leon              #+#    #+#             */
-/*   Updated: 2023/09/13 09:59:02 by leon             ###   ########.fr       */
+/*   Created: 2023/09/13 10:01:33 by leon              #+#    #+#             */
+/*   Updated: 2023/09/13 10:07:06 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			i;
-	unsigned char	*dest;
-	unsigned char	*source;
+	unsigned char	*ptr;
+	unsigned char	ci;
 
-	dest = (unsigned char *)dst;
-	source = (unsigned char *)src;
-	i = 0;
-	if (dest > source)
+	ptr = (unsigned char *)s;
+	ci = (unsigned char)c;
+	while (n)
 	{
-		while (i < len)
-		{
-			dest[i] = source[i];
-			i++;
-		}
+		if (*ptr == ci)
+			return (ptr);
+		ptr++;
+		n--;
 	}
-	else if (dest < source)
-	{
-		while (len > 0)
-		{
-			dest[len - 1] = source[len - 1];
-			len--;
-		}
-	}
-	return (dst);
+	return (NULL);
 }

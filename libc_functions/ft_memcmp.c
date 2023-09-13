@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 21:56:10 by leon              #+#    #+#             */
-/*   Updated: 2023/09/13 09:59:02 by leon             ###   ########.fr       */
+/*   Created: 2023/09/13 10:08:04 by leon              #+#    #+#             */
+/*   Updated: 2023/09/13 10:15:17 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
 	size_t			i;
-	unsigned char	*dest;
-	unsigned char	*source;
 
-	dest = (unsigned char *)dst;
-	source = (unsigned char *)src;
+	ptr1 = (unsigned char *)s1;
+	ptr2 = (unsigned char *)s2;
 	i = 0;
-	if (dest > source)
+	while (i < n)
 	{
-		while (i < len)
-		{
-			dest[i] = source[i];
-			i++;
-		}
+		if (ptr1[i] != ptr2[i])
+			return (ptr1[i] - ptr2[i]);
+		i++;
 	}
-	else if (dest < source)
-	{
-		while (len > 0)
-		{
-			dest[len - 1] = source[len - 1];
-			len--;
-		}
-	}
-	return (dst);
+	return (0);
 }
