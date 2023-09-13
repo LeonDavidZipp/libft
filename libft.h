@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:28:22 by leon              #+#    #+#             */
-/*   Updated: 2023/09/13 21:08:35 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 23:10:07 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,5 +131,15 @@ typedef struct s_list
 	size_t			content_size;
 	struct s_list	*next;
 }	t_list;
+
+void			ft_lstadd(t_list **alst, t_list *new);
+
+void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+
+void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+
+t_list			*ft_lstnew(void const *content, size_t content_size);
+
+void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
 #endif
