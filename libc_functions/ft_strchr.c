@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:06:46 by leon              #+#    #+#             */
-/*   Updated: 2023/09/13 11:42:14 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 11:44:51 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ char	*ft_strchr(const char *s, int c)
 //     char *result2_str = strchr(str2, c2);
 //     char *result3_ft = ft_strchr(str3, c3);
 //     char *result3_str = strchr(str3, c3);
-//     printf("ft_strchr: expected output: \"o, World!\" | \"%s\"\n", result1_ft);
-//     printf("strchr: expected output: \"o, World!\" | \"%s\"\n", result1_str);
+//     printf("ft_strchr: \"o, World!\" | \"%s\"\n", result1_ft);
+//     printf("strchr: \"o, World!\" | \"%s\"\n", result1_str);
 //     printf("ft_strchr: expected output: \"5\" | \"%s\"\n", result2_ft);
 //     printf("strchr: expected output: \"5\" | \"%s\"\n", result2_str);
 //     printf("ft_strchr: expected output: \"(null)\" | \"%s\"\n", result3_ft);
