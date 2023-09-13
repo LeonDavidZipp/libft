@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 10:01:33 by leon              #+#    #+#             */
-/*   Updated: 2023/09/13 10:07:06 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 15:09:24 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (n)
 	{
 		if (*ptr == ci)
-			return (ptr);
+			return ((void *)ptr);
 		ptr++;
 		n--;
 	}

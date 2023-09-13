@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 21:56:10 by leon              #+#    #+#             */
-/*   Updated: 2023/09/13 09:59:02 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 15:10:48 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			len--;
 		}
 	}
-	return (dst);
+	return ((void *)dst);
 }

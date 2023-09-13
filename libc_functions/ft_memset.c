@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 18:01:29 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 20:41:42 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 15:11:05 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	ptr = b;
 	while (len--)
 		*ptr++ = (unsigned char)c;
-	return (b);
+	return ((void *)b);
 }
 // #include <string.h>
 // #include <stdio.h>

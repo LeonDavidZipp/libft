@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 20:04:12 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 17:39:46 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 14:58:59 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_atoi(const char *str)
 		result = result * 10 + str[i] - '0';
 		i++;
 	}
-	return (result * sign);
+	return ((int)(result * sign));
 }
 // #include <stdio.h>
 // #include <stdlib.h>

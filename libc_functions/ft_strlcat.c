@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 11:53:35 by lzipp             #+#    #+#             */
-/*   Updated: 2023/09/13 12:59:03 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 14:45:16 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ unsigned int	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[len_dst + i] = '\0';
-	return (len_dst + len_src);
+	return ((unsigned int)(len_dst + len_src));
 }
 // #include <stdio.h>
 // #include <unistd.h>

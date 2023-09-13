@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 10:08:04 by leon              #+#    #+#             */
-/*   Updated: 2023/09/13 10:15:17 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 15:09:51 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (ptr1[i] != ptr2[i])
-			return (ptr1[i] - ptr2[i]);
+			return ((int)(ptr1[i] - ptr2[i]));
 		i++;
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 10:05:52 by lzipp             #+#    #+#             */
-/*   Updated: 2023/09/12 17:42:23 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 15:11:39 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 			break ;
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	return ((int)(s1[i] - s2[i]));
 }
 // #include <stdio.h>
 // #include <string.h>
