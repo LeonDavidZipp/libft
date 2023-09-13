@@ -6,18 +6,18 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 19:47:07 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 17:47:13 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 12:59:24 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen(const char *s)
 {
 	size_t	len;
 
 	len = 0;
-	while (str[len])
+	while (s[len])
 		len++;
 	return (len);
 }

@@ -6,34 +6,34 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 17:17:21 by lzipp             #+#    #+#             */
-/*   Updated: 2023/09/12 17:40:50 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 12:55:44 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, const char *src)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	int	i;
 	int	len;
 
 	i = 0;
 	len = 0;
-	while (dest[len])
+	while (s1[len])
 		len++;
-	while (src[i])
-		dest[len++] = src[i++];
-	dest[len] = '\0';
-	return (dest);
+	while (s2[i])
+		s1[len++] = s2[i++];
+	s1[len] = '\0';
+	return (s1);
 }
 // #include <stdio.h>
 // #include <unistd.h>
 // #include <string.h>
 // int	main()
 // {
-// 	char	dest[100] = "abcde78";
-// 	char	dest2[100] = "abcde78";
-// 	char	src[] = " Hello World!";
-// 	char *l = ft_strcat(dest, src);
-// 	char *m = strcat(dest2, src);
+// 	char	s1[100] = "abcde78";
+// 	char	s12[100] = "abcde78";
+// 	char	s2[] = " Hello World!";
+// 	char *l = ft_strcat(s1, s2);
+// 	char *m = strcat(s12, s2);
 // 	printf("ft_str: %s\n", l);
 // 	printf("str: %s\n", m);
 // 	return (0);

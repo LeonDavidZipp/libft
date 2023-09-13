@@ -6,25 +6,25 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 16:13:19 by lzipp             #+#    #+#             */
-/*   Updated: 2023/09/12 17:51:09 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 13:02:31 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < n && src[i])
+	while (i < len && src[i])
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+	while (i < len)
+		dst[i++] = '\0';
+	return (dst);
 }
 // #include <stdio.h>
 // #include <string.h>
