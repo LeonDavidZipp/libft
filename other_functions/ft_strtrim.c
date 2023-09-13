@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 21:26:24 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 00:10:49 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 15:20:01 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char	*ft_strtrim(char const *s)
 {
 	int		i;
 	int		rev_i;
-	char	*result;
 	int		j;
+	char	*result;
 
 	i = 0;
 	rev_i = 0;

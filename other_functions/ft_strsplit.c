@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 22:07:01 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 10:31:42 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 15:19:34 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	ft_count_words(char const *s, char c)
 	return (count);
 }
 
-int	ft_get_wlen(char const *s, char c)
+static int	ft_get_wlen(char const *s, char c)
 {
 	int	len;
 
@@ -40,7 +40,7 @@ int	ft_get_wlen(char const *s, char c)
 	return (len);
 }
 
-void	ft_free_mem(char **result, int j)
+static void	ft_free_mem(char **result, int j)
 {
 	while (j - 1 >= 0)
 	{
