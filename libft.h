@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:28:22 by leon              #+#    #+#             */
-/*   Updated: 2023/09/13 23:10:07 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/13 23:39:37 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,5 +141,7 @@ void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 t_list			*ft_lstnew(void const *content, size_t content_size);
 
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+
+t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif
