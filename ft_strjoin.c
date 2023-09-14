@@ -6,11 +6,11 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:50:51 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 17:59:38 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/14 13:14:01 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static size_t	ft_getlen(char const *str)
 {

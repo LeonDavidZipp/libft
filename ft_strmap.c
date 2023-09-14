@@ -6,11 +6,11 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:55:10 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 17:58:59 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/14 13:14:21 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {

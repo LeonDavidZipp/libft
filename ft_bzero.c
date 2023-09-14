@@ -6,11 +6,11 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 20:49:31 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 20:56:22 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/14 13:10:59 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

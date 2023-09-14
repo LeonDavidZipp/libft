@@ -6,11 +6,11 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 23:07:53 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 17:55:12 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/14 13:11:57 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memalloc(size_t size)
 {

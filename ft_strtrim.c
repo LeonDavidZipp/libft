@@ -6,11 +6,11 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 21:26:24 by leon              #+#    #+#             */
-/*   Updated: 2023/09/13 15:20:01 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/14 13:15:16 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strtrim(char const *s)
 {

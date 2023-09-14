@@ -6,11 +6,11 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:11:47 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 17:15:03 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/14 13:13:52 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {

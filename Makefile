@@ -6,7 +6,7 @@
 #    By: leon <leon@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2023/09/14 11:21:20 by leon             ###   ########.fr        #
+#    Updated: 2023/09/14 13:09:51 by leon             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ ft_isprint.c\
 ft_itoa.c\
 ft_lstadd.c\
 ft_lstdel.c\
-ft_lsdelone.c\
+ft_lstdelone.c\
 ft_lstiter.c\
 ft_lstmap.c\
 ft_lstnew.c\
@@ -94,4 +94,5 @@ re: fclean all
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
-	
+
+.PHONY: all clean fclean re

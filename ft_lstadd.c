@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:18:18 by leon              #+#    #+#             */
-/*   Updated: 2023/09/13 22:56:07 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/14 13:07:15 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	new->next = alst;
+	new->next = *alst;
 	*alst = new;
 }

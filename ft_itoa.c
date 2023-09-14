@@ -6,11 +6,11 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 00:12:22 by leon              #+#    #+#             */
-/*   Updated: 2023/09/12 10:30:43 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/14 13:11:25 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	ft_get_len(long nb)
 {

@@ -6,11 +6,11 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 22:07:01 by leon              #+#    #+#             */
-/*   Updated: 2023/09/13 15:19:34 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/14 13:14:57 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	ft_count_words(char const *s, char c)
 {
