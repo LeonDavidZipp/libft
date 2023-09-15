@@ -6,7 +6,7 @@
 #    By: leon <leon@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2023/09/15 11:18:19 by leon             ###   ########.fr        #
+#    Updated: 2023/09/15 11:19:00 by leon             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ ft_strcmp.c\
 ft_strcpy.c\
 ft_strdel.c\
 ft_strdup.c\
-ft_streque.c\
+ft_strequ.c\
 ft_striter.c\
 ft_striteri.c\
 ft_strjoin.c\

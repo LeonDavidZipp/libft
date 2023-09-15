@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 11:53:35 by lzipp             #+#    #+#             */
-/*   Updated: 2023/09/14 13:14:06 by leon             ###   ########.fr       */
+/*   Updated: 2023/09/15 11:20:27 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ unsigned int	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	len_dst = ft_getlen(dst);
-	len_src = ft_getlen(src);
+	len_src = ft_getlen((char *)src);
 	i = 0;
 	if (dstsize <= len_dst)
 		return (dstsize + len_src);
