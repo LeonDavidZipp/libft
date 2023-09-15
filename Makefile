@@ -6,7 +6,7 @@
 #    By: leon <leon@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2023/09/14 13:09:51 by leon             ###   ########.fr        #
+#    Updated: 2023/09/15 11:18:19 by leon             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,6 @@ ft_lstadd.c\
 ft_lstdel.c\
 ft_lstdelone.c\
 ft_lstiter.c\
-ft_lstmap.c\
 ft_lstnew.c\
 ft_memalloc.c\
 ft_memccpy.c\
