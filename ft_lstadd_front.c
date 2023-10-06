@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 13:28:58 by leon              #+#    #+#             */
-/*   Updated: 2023/09/14 13:15:12 by leon             ###   ########.fr       */
+/*   Created: 2023/10/06 14:59:18 by lzipp             #+#    #+#             */
+/*   Updated: 2023/10/06 15:06:54 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	char	*sub;
-	size_t	i;
-
-	sub = (char *)malloc((len + 1) * sizeof(char));
-	if (!sub)
-		return (NULL);
-	i = 0;
-	while (s[start] && i < len)
-		sub[i++] = s[start++];
-	sub[i] = '\0';
-	return (sub);
+	new->next = *lst;
+	*lst = new;
 }

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 22:56:26 by leon              #+#    #+#             */
-/*   Updated: 2023/09/13 23:13:19 by leon             ###   ########.fr       */
+/*   Updated: 2023/10/05 11:58:40 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*successor;
 
@@ -27,7 +27,7 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 	}
 }
 // #include <stdio.h>
-// static void	print_elem(t_list *elem)
+// static void	print_elem(void *)
 // {
 //     printf("%s\n", (char *)elem->content);
 // }
