@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:26:57 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/06 16:05:47 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/06 18:43:09 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ int				ft_isprint(int c);
 
 char			*ft_itoa(int n);
 
-// void			ft_lstadd_back(t_list **lst, t_list *new);
+void			ft_lstadd_back(t_list **lst, t_list *new);
 
-// void			ft_lstdelone(t_list **lst, void (*del)(void *));
+void			ft_lstdelone(t_list **lst, void (*del)(void *));
 
-// void			ft_lstiter(t_list *lst, void (*f)(void *));
+void			ft_lstiter(t_list *lst, void (*f)(void *));
 
 t_list			*ft_lstnew(void *content);
 
@@ -99,5 +99,7 @@ int				ft_toupper(int c);
 void			ft_lstadd_back(t_list **lst, t_list *new);
 
 t_list			*ft_lstlast(t_list *lst);
+
+void			ft_lstclear(t_list **lst, void (*del)(void*));
 
 #endif

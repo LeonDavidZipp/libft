@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 22:56:26 by leon              #+#    #+#             */
-/*   Updated: 2023/10/05 11:58:40 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/06 18:50:12 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		while (lst != NULL)
 		{
 			successor = lst->next;
-			f(lst);
+			f(lst->content);
 			lst = successor;
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:06:16 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/06 18:37:08 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/06 18:38:15 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,15 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	free(*lst);
 	*lst = NULL;
 }
-#include <stdio.h>
-#include <stdlib.h>
-void	delete(void *p)
-{
-	unsigned char	*point;
+// #include <stdio.h>
+// #include <stdlib.h>
+// void	delete(void *p)
+// {
+// 	unsigned char	*point;
 
-	point = NULL;
-	p = (void *)point;
-}
+// 	point = NULL;
+// 	p = (void *)point;
+// }
 // void print_list(t_list *lst) {
 //     t_list *current = lst;
 //     while (current != NULL) {
