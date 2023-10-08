@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2023/10/08 17:13:49 by lzipp            ###   ########.fr        #
+#    Updated: 2023/10/08 21:05:27 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,7 @@ $(NAME): $(OBJECTS)
 	ar -rc $(NAME) $(OBJECTS)
 
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(OBJECTS) $(BONUS_OBJECTS)
 	
 fclean: clean
 	rm -f $(NAME)
@@ -85,5 +85,5 @@ re: fclean all
 
 .PHONY: all clean fclean re
 
-bonus: $(BONUS_OBJECTS)
-	ar -rc $(NAME) $(BONUS_OBJECTS)
+bonus: $(BONUS_OBJECTS) $(OBJECTS)
+	ar -rc $(NAME) $(BONUS_OBJECTS) $(OBJECTS)

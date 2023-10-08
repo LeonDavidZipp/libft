@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:26:57 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 11:23:21 by leon             ###   ########.fr       */
+/*   Updated: 2023/10/08 21:16:23 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 
 size_t			ft_strlen(const char *s);
 
+char			*ft_substr(char const *s, unsigned int start, size_t len);
+
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -91,7 +93,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-void			ft_lstadd_back(t_list **lst, t_list *new);
+void			ft_lstadd_front(t_list **lst, t_list *new);
 
 t_list			*ft_lstlast(t_list *lst);
 
@@ -104,5 +106,7 @@ void			ft_lstdelone(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 
 t_list			*ft_lstnew(void *content);
+
+int				ft_lstsize(t_list *lst);
 
 #endif

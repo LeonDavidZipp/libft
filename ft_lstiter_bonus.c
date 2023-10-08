@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:30:48 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 11:30:49 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/08 21:23:34 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,10 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*successor;
-
-	if (lst && f)
+	while (lst != NULL)
 	{
-		while (lst != NULL)
-		{
-			successor = lst->next;
-			f(lst->content);
-			lst = successor;
-		}
+		f(lst->content);
+		lst = lst->next;
 	}
 }
 // #include <stdio.h>
