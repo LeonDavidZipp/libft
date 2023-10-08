@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:26:57 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 11:02:08 by leon             ###   ########.fr       */
+/*   Updated: 2023/10/08 11:23:21 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ void			ft_putstr_fd(char const *s, int fd);
 char			**ft_split(char const *s, char c);
 
 char			*ft_strchr(const char *s, int c);
+
+char			*ft_strrchr(const char *s, int c);
 
 char			*ft_strdup(const char *s1);
 
