@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 20:04:12 by leon              #+#    #+#             */
-/*   Updated: 2023/09/14 13:10:42 by leon             ###   ########.fr       */
+/*   Updated: 2023/10/08 11:05:17 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_atoi(const char *str)
 	{
 		if (!(str[i] >= '0' && str[i] <= '9'))
 			break ;
-		result = result * 10 + str[i] - '0';
+		result = (result * 10) + (str[i] - '0');
 		i++;
 	}
 	return ((int)(result * sign));
