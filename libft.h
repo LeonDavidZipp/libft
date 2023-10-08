@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:26:57 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/06 18:43:09 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/08 11:02:08 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
 
 int				ft_atoi(const char *str);
 
@@ -39,14 +33,6 @@ int				ft_isdigit(int c);
 int				ft_isprint(int c);
 
 char			*ft_itoa(int n);
-
-void			ft_lstadd_back(t_list **lst, t_list *new);
-
-void			ft_lstdelone(t_list **lst, void (*del)(void *));
-
-void			ft_lstiter(t_list *lst, void (*f)(void *));
-
-t_list			*ft_lstnew(void *content);
 
 void			*ft_memchr(const void *s, int c, size_t n);
 
@@ -96,10 +82,25 @@ int				ft_tolower(int c);
 int				ft_toupper(int c);
 
 // bonus part 2
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
 void			ft_lstadd_back(t_list **lst, t_list *new);
 
 t_list			*ft_lstlast(t_list *lst);
 
 void			ft_lstclear(t_list **lst, void (*del)(void*));
+
+void			ft_lstadd_back(t_list **lst, t_list *new);
+
+void			ft_lstdelone(t_list **lst, void (*del)(void *));
+
+void			ft_lstiter(t_list *lst, void (*f)(void *));
+
+t_list			*ft_lstnew(void *content);
 
 #endif
