@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2023/10/08 13:33:27 by lzipp            ###   ########.fr        #
+#    Updated: 2023/10/08 17:13:49 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,15 +25,6 @@ ft_isascii.c\
 ft_isdigit.c\
 ft_isprint.c\
 ft_itoa.c\
-ft_lstadd_back.c\
-ft_lstadd_front.c\
-ft_lstclear.c\
-ft_lstdelone.c\
-ft_lstiter.c\
-ft_lstlast.c\
-ft_lstmap.c\
-ft_lstnew.c\
-ft_lstsize.c\
 ft_memchr.c\
 ft_memcmp.c\
 ft_memcpy.c\
@@ -64,10 +55,22 @@ OBJECTS = $(SOURCES:.c=.o)
 
 INCLUDES = libft.h
 
+BONUS_SOURCES = ft_lstadd_back_bonus.c\
+ft_lstadd_front_bonus.c\
+ft_lstclear_bonus.c\
+ft_lstdelone_bonus.c\
+ft_lstiter_bonus.c\
+ft_lstlast_bonus.c\
+ft_lstmap_bonus.c\
+ft_lstsize_bonus.c\
+ft_lstnew_bonus.c\
+
+BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar rcs $(NAME) $(OBJECTS)
+	ar -rc $(NAME) $(OBJECTS)
 
 clean:
 	rm -f $(OBJECTS)
@@ -81,3 +84,6 @@ re: fclean all
 	$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: all clean fclean re
+
+bonus: $(BONUS_OBJECTS)
+	ar -rc $(NAME) $(BONUS_OBJECTS)

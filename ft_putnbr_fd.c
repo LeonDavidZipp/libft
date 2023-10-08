@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:10 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 11:32:11 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/08 13:36:13 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	ft_putnbr_fd(int n, int fd)
 		nb *= -1;
 	}
 	if (nb > 9)
-		ft_putnbr(nb / 10);
+		ft_putnbr_fd(nb / 10, fd);
 	write(fd, &"0123456789"[nb % 10], 1);
 }
