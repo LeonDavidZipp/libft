@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:30:54 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 17:12:37 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/09 22:32:42 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,21 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+	t_list	*successor;
+	t_list	*current;
+
+	current = lst;
+	if (lst == NULL)
+		return (NULL);
+	else
+	{
+		while (current->next != NULL)
+		{
+			successor = current->next;
+			current = successor;
+		}
+	}
+	return (current);
 }
 // #include <stdio.h>
 // int main() {

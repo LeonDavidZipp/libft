@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:31:15 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 11:31:16 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/09 22:15:51 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,12 @@ t_list	*ft_lstnew(void *content)
 		new->content = NULL;
 	else
 	{
-		new->content = (void *)malloc(sizeof(content));
+		new->content = content;
 		if (!new->content)
 		{
 			free(new);
 			return (NULL);
 		}
-		ft_memcpy(new->content, content, sizeof(content));
 	}
 	new->next = NULL;
 	return (new);
@@ -50,8 +49,8 @@ t_list	*ft_lstnew(void *content)
 //     node2 = ft_lstnew(NULL);
 //     if (node2)
 //     {
-//         printf("Node2 Content: %p\n", node2->content);
-//         printf("Node2 Content Size: %zu\n", sizeof(content));
+//         printf("Node2 Content: %p\n", (char *)node2->content);
+//         printf("Node2 Content Size: %zu\n", sizeof(str));
 //         free(node2);
 //     }
 //     return (0);
