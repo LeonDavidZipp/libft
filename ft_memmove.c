@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:31:44 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/09 16:33:34 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/09 16:33:50 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (dst > src)
 	{
 		while (len-- > 0)
-		{
 			dest[len] = source[len];
-		}
 	}
 	else if (dst < src)
 	{
