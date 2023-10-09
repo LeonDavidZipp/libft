@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:29:26 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 20:55:02 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/09 10:42:37 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,31 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char	*ptr;
 	size_t			total;
 
+	if (count < 0 || size < 0)
+		return (NULL);
+	if (count == 0 || size == 0)
+		return ((void *)malloc(0));
 	total = count * size;
-	if (total / size != count || count < 0 || size < 0)
+	if (size != 0 && total / size != count)
 		return (NULL);
 	ptr = (unsigned char *)malloc(total);
-	if (!ptr && count != 0 && size != 0)
+	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, count);
 	return ((void *)ptr);
 }
+// void    *ft_calloc(size_t num, size_t size)
+// {
+//     void    *p;
+//     size_t  tot;
+
+//     tot = num * size;
+//     p = malloc (tot);
+//     if (!p)
+//         return (0);
+//     ft_bzero(p, tot);
+//     return (p);
+// }
 // #include <stdio.h>
 // #include <string.h>
 

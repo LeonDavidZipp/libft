@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:33:56 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 11:33:57 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/09 11:02:33 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		res[j++] = s[start++];
 		len--;
 	}
-	res[start] = '\0';
+	res[j] = '\0';
 	return (res);
 }
 // #include <stdio.h>
