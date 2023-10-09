@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:33:36 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 11:33:40 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/08 23:13:58 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,30 +37,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 		result[j++] = s1[i++];
 	return (result);
 }
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
-// int	main(void)
-// {
-// 	char *str1 = "   Hello, World!   n";
-// 	char *str2 = "\t12345\t";
-// 	char *str3 = "\n\nLorem ipsum\n\nn";
-// 	char *str4 = "stwHellostw";
-// 	char *str5 = "NoSpacesHere";
-// 	char *result1 = ft_strtrim(str1, "   ");
-// 	char *result2 = ft_strtrim(str2, "\t");
-// 	char *result3 = ft_strtrim(str3, "\n\n");
-// 	char *result4 = ft_strtrim(str4, "stw");
-// 	char *result5 = ft_strtrim(str5, "No");
-// 	printf("expected output: \"Hello, World!   n\" | \"%s\"\n", result1);
-// 	printf("expected output: \"12345\" | \"%s\"\n", result2);
-// 	printf("expected output: \"Lorem ipsum\" | \"%s\"\n", result3);
-// 	printf("expected output: \"Hello\" | \"%s\"\n", result4);
-// 	printf("expected output: \"NoSpacesHere\" | \"%s\"\n", result5);
-// 	free(result1);
-// 	free(result2);
-// 	free(result3);
-// 	free(result4);
-// 	free(result5);
-// 	return (0);
-// }
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int	main(void)
+{
+	if (ft_strncmp(ft_strtrim("  xxxtripouille x", " x"), "tripouille", 30))
+		printf("\"%s\"\n", ft_strtrim(" xxxtripouille x", " x"));
+	return (0);
+}

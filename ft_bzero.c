@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:29:21 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 20:08:17 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/09 10:36:53 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*ptr;
+	char	*ptr;
 
-	ptr = (unsigned char *)s;
+	ptr = (char *)s;
 	while (n > 0)
 	{
-		*ptr++ = 0;
+		*ptr = 0;
+		ptr++;
 		n--;
 	}
 }
