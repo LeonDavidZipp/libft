@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+         #
+#    By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2023/10/08 21:05:27 by lzipp            ###   ########.fr        #
+#    Updated: 2023/10/09 10:09:02 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,4 +86,4 @@ re: fclean all
 .PHONY: all clean fclean re
 
 bonus: $(BONUS_OBJECTS) $(OBJECTS)
-	ar -rc $(NAME) $(BONUS_OBJECTS) $(OBJECTS)
+	ar -rc $(NAME) $(OBJECTS) $(BONUS_OBJECTS)

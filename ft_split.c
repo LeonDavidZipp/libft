@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:23 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 11:32:24 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/09 17:33:20 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-static int	ft_count_words(char const *s, char c)
+static int	ft_count_words(const char *s, char c)
 {
 	int		i;
 	int		count;
@@ -27,10 +28,11 @@ static int	ft_count_words(char const *s, char c)
 			count++;
 		i++;
 	}
+	printf("%d\n", count);
 	return (count);
 }
 
-static int	ft_get_wlen(char const *s, char c)
+static int	ft_get_wlen(const char *s, char c)
 {
 	int	len;
 
@@ -40,17 +42,17 @@ static int	ft_get_wlen(char const *s, char c)
 	return (len);
 }
 
-static void	ft_free_mem(char **result, int j)
-{
-	while (j - 1 >= 0)
-	{
-		free(result[j - 1]);
-		j--;
-	}
-	free(*result);
-}
+// static void	ft_free_mem(char **result, int j)
+// {
+// 	while (j - 1 >= 0)
+// 	{
+// 		free(result[j - 1]);
+// 		j--;
+// 	}
+// 	free(*result);
+// }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char	**result;
 	int		len;
@@ -59,7 +61,7 @@ char	**ft_split(char const *s, char c)
 	int		k;
 
 	len = ft_count_words(s, c);
-	result = (char **)malloc(len * sizeof(char *));
+	result = (char **)malloc((len + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
 	i = 0;
@@ -69,44 +71,23 @@ char	**ft_split(char const *s, char c)
 		while (s[i] == c && s[i])
 			i++;
 		result[j] = (char *)malloc((ft_get_wlen(&s[i], c) + 1) * sizeof(char));
+		printf("%d\n", j);
 		if (!result[j])
-			ft_free_mem(result, j);
+			return (NULL);
 		k = 0;
 		while (s[i] != c && s[i])
-			result[j][k++] = s[i++];
+			{printf("%c\n", result[j][k]);
+			result[j][k++] = s[i++];}
 		result[j++][k] = '\0';
 	}
+	result[j] = NULL;
 	return (result);
 }
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
-// int	main(void)
-// {
-//     char *str1 = "Hello, World!";
-//     char *str2 = "12345";
-//     char *str3 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
-//     char *str4 = "   ";
-//     char *str5 = "NoSpacesHere";
-//     char **result1 = ft_strsplit(str1, ' ');
-//     char **result2 = ft_strsplit(str2, ' ');
-//     char **result3 = ft_strsplit(str3, ' ');
-//     char **result4 = ft_strsplit(str4, ' ');
-//     char **result5 = ft_strsplit(str5, ' ');
-//     for (int i = 0; i < 2; i++)
-//         printf("expected: \"%s\" | \"%s\"\n", result1[i], result1[i]);
-//     for (int i = 0; i < 1; i++)
-//         printf("expected: \"%s\" | \"%s\"\n", result2[i], result2[i]);
-//     for (int i = 0; i < 8; i++)
-//         printf("expected: \"%s\" | \"%s\"\n", result3[i], result3[i]);
-//     for (int i = 0; i < 0; i++)
-//         printf("ft_strsplit: expected output: \"\" | \"%s\"\n", result4[i]);
-//     for (int i = 0; i < 1; i++)
-//         printf("expected: \"NoSpacesHere\" | \"%s\"\n", result5[i]);
-//     free(result1);
-//     free(result2);
-//     free(result3);
-//     free(result4);
-//     free(result5);
-//     return (0);
-// }
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int	main(void)
+{
+	const char *h = "hello you dick";
+	ft_split(h, ' ');
+}
