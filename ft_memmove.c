@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:31:44 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 19:31:30 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/09 14:49:02 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,16 @@
 
 static void	greater(unsigned char *dst, unsigned char *src, size_t len)
 {
-	size_t			i;
+	size_t	i;
+	char	next;
 
 	i = 0;
 	while (i < len)
 	{
+		if (i + 1 < len)
+			next = dst[i + 1];
+		else
+			next = dst[i];
 		dst[i] = src[i];
 		i++;
 	}
@@ -39,16 +44,14 @@ static void	less(unsigned char *dst, unsigned char *src, size_t len)
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*dest;
-	unsigned char	*temp;
+	unsigned char	*source;
 
 	dest = (unsigned char *)dst;
-	temp = (unsigned char *)malloc(len * sizeof(unsigned char));
-	temp = ft_memcpy(temp, (unsigned char *)src, len);
+	source = (unsigned char *)src;
 	if (dst > src)
-		greater(dest, temp, len);
+		greater(dest, source, len);
 	else if (dst < src)
-		less(dest, temp, len);
-	free(temp);
+		less(dest, source, len);
 	return ((void *)dst);
 }
 

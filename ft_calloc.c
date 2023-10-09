@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:29:26 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/09 11:17:16 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/09 11:24:22 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,16 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void		*ptr;
-	size_t		total;
+	void	*ptr;
 
-	total = count * size;
-	ptr = malloc(total);
+	ptr = (void *)malloc(count * size);
 	if (!ptr)
 		return (0);
-	ft_bzero(ptr, count);
+	ft_bzero(ptr, count * size);
 	return (ptr);
 }
-// void    *ft_calloc(size_t num, size_t size)
-// {
-//     void    *p;
-//     size_t  tot;
-
-//     tot = num * size;
-//     p = malloc (tot);
-//     if (!p)
-//         return (0);
-//     ft_bzero(p, tot);
-//     return (p);
-// }
 // #include <stdio.h>
 // #include <string.h>
-
 // int main(void)
 // {
 // 	// Test case 1: Allocate memory for 5 integers
@@ -56,7 +41,6 @@ void	*ft_calloc(size_t count, size_t size)
 // 	{
 // 		printf("Memory allocation failed.\n");
 // 	}
-
 // 	Test case 2: Allocate memory for 3 double-precision floating-point numbers
 // 	double *doubleArray = (double *)ft_calloc(3, sizeof(double));
 // 	if (doubleArray != NULL)
