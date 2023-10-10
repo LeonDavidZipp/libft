@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:26:57 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/09 22:42:03 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/09 23:28:12 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,5 +108,7 @@ void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstnew(void *content);
 
 int				ft_lstsize(t_list *lst);
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
