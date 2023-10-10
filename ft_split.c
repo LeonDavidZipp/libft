@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:23 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/09 21:25:25 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/10 11:40:30 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,43 @@ static int	ft_get_wlen(const char *s, char c)
 	return (len);
 }
 
+static void	ft_free_mem(char **result, int j)
+{
+	while (j >= 0)
+	{
+		free(result[j]);
+		j--;
+	}
+	free(*result);
+}
+
+static char	**ft_mini_split(const char *s, char c, int i, int j, int k)
+{
+	char	**result;
+
+	result = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
+	if (!result)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (j < ft_count_words(s, c))
+	{
+		while (s[i] == c && s[i])
+			i++;
+		result[j] = (char *)malloc((ft_get_wlen(&s[i], c) + 1) * sizeof(char));
+		if (!result[j])
+		{
+			ft_free_mem(result, j - 1);
+			return (NULL);
+		}
+		k = 0;
+		while (s[i] != c && s[i])
+			result[j][k++] = s[i++];
+		result[j++][k] = '\0';
+	}
+	result[j] = NULL;
+}
+
 char	**ft_split(const char *s, char c)
 {
 	char	**result;
@@ -56,7 +93,10 @@ char	**ft_split(const char *s, char c)
 			i++;
 		result[j] = (char *)malloc((ft_get_wlen(&s[i], c) + 1) * sizeof(char));
 		if (!result[j])
+		{
+			ft_free_mem(result, j - 1);
 			return (NULL);
+		}
 		k = 0;
 		while (s[i] != c && s[i])
 			result[j][k++] = s[i++];
