@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 23:01:08 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/10 14:59:45 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/10 17:20:28 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,16 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
 	t_list	*new_elem;
+	void	*content;
 
 	new_lst = NULL;
 	while (lst != NULL)
 	{
-		new_elem = ft_lstnew(f(lst->content));
+		content = f(lst->content);
+		new_elem = ft_lstnew(content);
 		if (!new_elem)
 		{
+			del(content);
 			ft_lstclear(&new_lst, del);
 			return (NULL);
 		}

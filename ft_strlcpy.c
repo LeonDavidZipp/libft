@@ -3,19 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:59 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/10 15:48:07 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/08 11:33:00 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-unsigned int	ft_strlcpy(char *dest, char *src, size_t size)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	size_t	i;
-	size_t	len;
+	unsigned int	i;
+	unsigned int	len;
 
 	i = 0;
 	len = 0;

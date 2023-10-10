@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:23 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/10 15:00:22 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/10 17:20:39 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static int	ft_free_mem(char **result, int j)
 			free(result[j - 1]);
 			j--;
 		}
-		free(*result);
+		free(result);
 		return (1);
 	}
 	return (0);
