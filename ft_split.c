@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:23 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/10 14:14:59 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/10 15:00:22 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,27 +80,26 @@ char	**ft_split(const char *s, char c)
 	result[j] = NULL;
 	return (result);
 }
+// #include <stdio.h>
+// int main() {
+//     const char *input = "This is a test string";
+//     char **result = ft_split(input, ' ');
+// 	system("leaks a.out");
 
-#include <stdio.h>
-int main() {
-    const char *input = "This is a test string";
-    char **result = ft_split(input, ' ');
-	system("leaks a.out");
+//     if (!result) {
+//         printf("Memory allocation error in ft_split\n");
+//         return 1;
+//     }
 
-    if (!result) {
-        printf("Memory allocation error in ft_split\n");
-        return 1;
-    }
+//     // Print the split strings
+//     for (int i = 0; result[i] != NULL; i++) {
+//         printf("Token %d: %s\n", i, result[i]);
+//     }
 
-    // Print the split strings
-    for (int i = 0; result[i] != NULL; i++) {
-        printf("Token %d: %s\n", i, result[i]);
-    }
-
-    // Free the memory allocated by ft_split
-    for (int i = 0; result[i] != NULL; i++) {
-        free(result[i]);
-    }
-    free(result);
-    return 0;
-}
+//     // Free the memory allocated by ft_split
+//     for (int i = 0; result[i] != NULL; i++) {
+//         free(result[i]);
+//     }
+//     free(result);
+//     return 0;
+// }
