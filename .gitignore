@@ -1,5 +1,4 @@
 *.out
 *.o
-old
-libft_tester
 *.txt
+*.a
