@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:33:22 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 11:33:23 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/13 13:24:22 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 	size_t	len_j;
 
+	if (!haystack && len == 0)
+		return (NULL);
 	i = 0;
 	len_j = 0;
 	while (needle[len_j] != '\0')
