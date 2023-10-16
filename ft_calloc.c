@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:29:26 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/16 18:38:32 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/16 18:40:28 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	total;
 
 	total = count * size;
-	if (count != 0 && total / count != size)
+	if ((count != 0 && total / count != size)
+		|| (size != 0 && total / size != count))
 		return (NULL);
 	ptr = (void *)malloc(count * size);
 	if (!ptr)
