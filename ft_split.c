@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:23 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/16 16:19:28 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/16 17:28:28 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	**ft_split(const char *s, char c)
 	{
 		while (s[i] == c && s[i])
 			i++;
-		result[j] = malloc((ft_get_wlen(&s[i], c) + 1) * sizeof(char));
+		result[j] = ft_calloc(ft_get_wlen(&s[i], c) + 1, sizeof(char));
 		if (ft_free_mem(result, j))
 			return (NULL);
 		k = 0;
