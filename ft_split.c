@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:23 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/10 17:20:39 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/16 16:19:28 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,17 @@ char	**ft_split(const char *s, char c)
 	int		i;
 	int		j;
 	int		k;
+	int		words;
 
-	result = ft_calloc(ft_count_words(s, c) + 1, sizeof(char *));
+	if (!s)
+		return (NULL);
+	words = ft_count_words(s, c);
+	result = ft_calloc(words + 1, sizeof(char *));
 	if (!result)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (j < ft_count_words(s, c))
+	while (j < words)
 	{
 		while (s[i] == c && s[i])
 			i++;

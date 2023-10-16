@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:37 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/13 13:20:23 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/16 16:21:11 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strdup(const char *s1)
 	char	*dest;
 	int		i;
 
+	if (!s1)
+		return (NULL);
 	i = 0;
 	while (s1[i])
 		i++;
