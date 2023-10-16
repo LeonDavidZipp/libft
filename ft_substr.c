@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:33:56 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/09 11:02:33 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/16 16:33:34 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 	char	*res;
 
+	if (!s)
+		return (NULL);
 	j = 0;
 	s_len = ft_strlen(s);
 	while (j + start < s_len && s[j + start] && j < len)
