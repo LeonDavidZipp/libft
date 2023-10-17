@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:23 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/16 17:28:28 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/17 10:28:30 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	ft_count_words(const char *s, char c)
 	int		i;
 	int		count;
 
+	if (!s)
+		return (0);
 	i = 0;
 	count = 0;
 	while (s[i])
@@ -28,60 +30,53 @@ static int	ft_count_words(const char *s, char c)
 	return (count);
 }
 
-static int	ft_get_wlen(const char *s, char c)
+static char	*ft_make_split_str(const char *s, char delim, int *i)
 {
-	int	len;
+	size_t	size;
 
-	len = 0;
-	while (s[len] != c && s[len] != '\0')
-		len++;
-	return (len);
+	size = *i;
+	while (s[*i] != delim && s[*i])
+		*i += 1;
+	*i -= 1;
+	return (ft_substr(s, size, *i - size + 1));
 }
 
-static int	ft_free_mem(char **result, int j)
+void	*ft_free_split(char **result)
 {
-	if (!result[j])
-	{
-		while (j - 1 >= 0)
-		{
-			free(result[j - 1]);
-			j--;
-		}
-		free(result);
-		return (1);
-	}
-	return (0);
+	int	i;
+
+	i = 0;
+	while (result[i] != NULL)
+		free(result[i++]);
+	free(result);
+	return (NULL);
 }
 
-char	**ft_split(const char *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char	**result;
-	int		i;
-	int		j;
-	int		k;
-	int		words;
+	int				word_count;
+	char			**result;
+	int				i;
+	int				j;
 
+	i = -1;
+	j = 0;
 	if (!s)
 		return (NULL);
-	words = ft_count_words(s, c);
-	result = ft_calloc(words + 1, sizeof(char *));
-	if (!result)
+	word_count = ft_count_words(s, c);
+	result = ft_calloc(word_count + 1, sizeof(char *));
+	if (result == NULL)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (j < words)
+	result[word_count] = NULL;
+	while (s[++i] && j < word_count)
 	{
-		while (s[i] == c && s[i])
-			i++;
-		result[j] = ft_calloc(ft_get_wlen(&s[i], c) + 1, sizeof(char));
-		if (ft_free_mem(result, j))
-			return (NULL);
-		k = 0;
-		while (s[i] != c && s[i])
-			result[j][k++] = s[i++];
-		result[j++][k] = '\0';
+		if (s[i] != c)
+		{
+			result[j++] = ft_make_split_str(s, c, &i);
+			if (!result[j - 1])
+				return (ft_free_split(result));
+		}
 	}
-	result[j] = NULL;
 	return (result);
 }
 // #include <stdio.h>
