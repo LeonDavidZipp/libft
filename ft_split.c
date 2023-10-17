@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:23 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/17 10:28:30 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/17 10:41:13 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ static int	ft_count_words(const char *s, char c)
 	int		i;
 	int		count;
 
-	if (!s)
-		return (0);
 	i = 0;
 	count = 0;
 	while (s[i])
@@ -30,18 +28,18 @@ static int	ft_count_words(const char *s, char c)
 	return (count);
 }
 
-static char	*ft_make_split_str(const char *s, char delim, int *i)
+static char	*ft_split_str(const char *s, char c, int *i)
 {
-	size_t	size;
+	size_t	len;
 
-	size = *i;
-	while (s[*i] != delim && s[*i])
-		*i += 1;
-	*i -= 1;
-	return (ft_substr(s, size, *i - size + 1));
+	len = *i;
+	while (s[*i] != c && s[*i])
+		(*i)++;
+	(*i)--;
+	return (ft_substr(s, len, *i - len + 1));
 }
 
-void	*ft_free_split(char **result)
+void	*ft_free_mem(char **result)
 {
 	int	i;
 
@@ -54,27 +52,27 @@ void	*ft_free_split(char **result)
 
 char	**ft_split(char const *s, char c)
 {
-	int				word_count;
-	char			**result;
-	int				i;
-	int				j;
+	int		words;
+	char	**result;
+	int		i;
+	int		j;
 
-	i = -1;
-	j = 0;
 	if (!s)
 		return (NULL);
-	word_count = ft_count_words(s, c);
-	result = ft_calloc(word_count + 1, sizeof(char *));
+	i = -1;
+	j = 0;
+	words = ft_count_words(s, c);
+	result = ft_calloc(words + 1, sizeof(char *));
 	if (result == NULL)
 		return (NULL);
-	result[word_count] = NULL;
-	while (s[++i] && j < word_count)
+	result[words] = NULL;
+	while (s[++i] && j < words)
 	{
 		if (s[i] != c)
 		{
-			result[j++] = ft_make_split_str(s, c, &i);
+			result[j++] = ft_split_str(s, c, &i);
 			if (!result[j - 1])
-				return (ft_free_split(result));
+				return (ft_free_mem(result));
 		}
 	}
 	return (result);
