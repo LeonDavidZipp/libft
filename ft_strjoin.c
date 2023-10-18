@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:48 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/16 16:22:36 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/18 17:56:38 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 // #include <string.h>
 // int	main(void)
 // {
-//     char *str1 = "Hello, ";
+//     char *str1 = NULL;
 //     char *str2 = "World!";
 //     char *str3 = "";
 //     char *str4 = "12345";
-//     char *str5 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 //     char *str7 = "0123456789";
 //     char *str8 = "abcdefghijklmnopqrstuvwxyz";
 //     char *str9 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -57,7 +56,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 //     char *result1 = ft_strjoin(str1, str2);
 //     char *result2 = ft_strjoin(str3, str3);
 //     char *result3 = ft_strjoin(str4, str4);
-//     char *result4 = ft_strjoin(str5, str6);
 //     char *result5 = ft_strjoin(str7, str8);
 //     char *result6 = ft_strjoin(str8, str9);
 //     char *result7 = ft_strjoin(str9, str10);
@@ -72,7 +70,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 //     free(result1);
 //     free(result2);
 //     free(result3);
-//     free(result4);
 //     free(result5);
 //     free(result6);
 //     free(result7);
