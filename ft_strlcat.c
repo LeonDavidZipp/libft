@@ -3,24 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:53 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 11:32:54 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/16 16:24:02 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	ft_getlen(char	*str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
-}
 
 unsigned int	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -28,8 +18,10 @@ unsigned int	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	len_src;
 	size_t	i;
 
-	len_dst = ft_getlen(dst);
-	len_src = ft_getlen((char *)src);
+	if (!dst && dstsize == 0)
+		return (0);
+	len_dst = ft_strlen(dst);
+	len_src = ft_strlen((char *)src);
 	i = 0;
 	if (dstsize <= len_dst)
 		return (dstsize + len_src);

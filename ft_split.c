@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:23 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/10 17:20:39 by lzipp            ###   ########.fr       */
+/*   Updated: 2023/10/17 10:41:13 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,56 +28,53 @@ static int	ft_count_words(const char *s, char c)
 	return (count);
 }
 
-static int	ft_get_wlen(const char *s, char c)
+static char	*ft_split_str(const char *s, char c, int *i)
 {
-	int	len;
+	size_t	len;
 
-	len = 0;
-	while (s[len] != c && s[len] != '\0')
-		len++;
-	return (len);
+	len = *i;
+	while (s[*i] != c && s[*i])
+		(*i)++;
+	(*i)--;
+	return (ft_substr(s, len, *i - len + 1));
 }
 
-static int	ft_free_mem(char **result, int j)
+void	*ft_free_mem(char **result)
 {
-	if (!result[j])
-	{
-		while (j - 1 >= 0)
-		{
-			free(result[j - 1]);
-			j--;
-		}
-		free(result);
-		return (1);
-	}
-	return (0);
+	int	i;
+
+	i = 0;
+	while (result[i] != NULL)
+		free(result[i++]);
+	free(result);
+	return (NULL);
 }
 
-char	**ft_split(const char *s, char c)
+char	**ft_split(char const *s, char c)
 {
+	int		words;
 	char	**result;
 	int		i;
 	int		j;
-	int		k;
 
-	result = ft_calloc(ft_count_words(s, c) + 1, sizeof(char *));
-	if (!result)
+	if (!s)
 		return (NULL);
-	i = 0;
+	i = -1;
 	j = 0;
-	while (j < ft_count_words(s, c))
+	words = ft_count_words(s, c);
+	result = ft_calloc(words + 1, sizeof(char *));
+	if (result == NULL)
+		return (NULL);
+	result[words] = NULL;
+	while (s[++i] && j < words)
 	{
-		while (s[i] == c && s[i])
-			i++;
-		result[j] = malloc((ft_get_wlen(&s[i], c) + 1) * sizeof(char));
-		if (ft_free_mem(result, j))
-			return (NULL);
-		k = 0;
-		while (s[i] != c && s[i])
-			result[j][k++] = s[i++];
-		result[j++][k] = '\0';
+		if (s[i] != c)
+		{
+			result[j++] = ft_split_str(s, c, &i);
+			if (!result[j - 1])
+				return (ft_free_mem(result));
+		}
 	}
-	result[j] = NULL;
 	return (result);
 }
 // #include <stdio.h>
