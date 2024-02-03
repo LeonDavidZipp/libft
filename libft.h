@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:05:51 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/04 00:29:41 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/04 00:48:52 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,16 @@
 # include <stdarg.h>
 
 # define BUFFER_SIZE 100
+# define OPEN_MAX 10240
+
+# define OPEN_FILE_ERROR "Could not open file"
+# define CLOSE_FILE_ERROR "Could not close file"
+# define READ_FILE_ERROR "Could not read from file"
+# define WRITE_FILE_ERROR "Could not write to file"
 
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
-int				ft_tolower(int c);
-int				ft_toupper(int c);
+long long		ft_power(long long base, long long exponent);
 
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t count, size_t size);
@@ -37,6 +42,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 void			ft_safe_free(void **ptr);
 void			ft_free_2d_arr(void **arr);
 void			ft_free_3d_arr(void ***arr);
+void			ft_free_4d_arr(void ****arr);
 
 int				ft_null_terminated_arr_len(void **arr);
 
@@ -46,6 +52,8 @@ int				ft_isascii(int c);
 int				ft_isdigit(int c);
 int				ft_isprint(int c);
 
+int				ft_tolower(int c);
+int				ft_toupper(int c);
 void			ft_putchar_fd(char c, int fd);
 int				ft_putchar_int(const char c);
 int				ft_putstr_int(const char *s);

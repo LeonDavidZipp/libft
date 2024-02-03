@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2024/02/04 00:28:18 by lzipp            ###   ########.fr        #
+#    Updated: 2024/02/04 00:49:09 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ CFLAGS = -Wextra -Wall -Werror
 
 SOURCES = $(addprefix src/,\
 ft_atoi.c\
+ft_power.c\
 ft_bzero.c\
 ft_calloc.c\
 ft_isalnum.c\
