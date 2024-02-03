@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:23 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/17 10:41:13 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/03 11:50:50 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static char	*ft_split_str(const char *s, char c, int *i)
 	return (ft_substr(s, len, *i - len + 1));
 }
 
-void	*ft_free_mem(char **result)
+static void	*ft_free_mem(char **result)
 {
 	int	i;
 

@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2023/10/13 13:34:57 by lzipp            ###   ########.fr        #
+#    Updated: 2024/01/12 16:58:01 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ ft_putchar_fd.c\
 ft_putendl_fd.c\
 ft_putnbr_fd.c\
 ft_putstr_fd.c\
+ft_recalloc.c\
 ft_split.c\
 ft_strchr.c\
 ft_strdup.c\
@@ -44,12 +45,14 @@ ft_strlcpy.c\
 ft_strlen.c\
 ft_strmapi.c\
 ft_strncmp.c\
+ft_strrncmp.c\
 ft_strrchr.c\
 ft_strnstr.c\
 ft_strtrim.c\
 ft_substr.c\
 ft_tolower.c\
 ft_toupper.c\
+ft_null_terminated_arr_len.c
 
 OBJECTS = $(SOURCES:.c=.o)
 

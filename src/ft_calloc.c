@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:29:26 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/16 18:40:28 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/01/09 13:05:14 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,26 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
+	char	*cptr;
 	size_t	total;
 
 	total = count * size;
 	if ((count != 0 && total / count != size)
 		|| (size != 0 && total / size != count))
 		return (NULL);
-	ptr = (void *)malloc(count * size);
+	ptr = (void *)malloc(total);
 	if (!ptr)
-		return (0);
-	ft_bzero(ptr, count * size);
+		return (NULL);
+	cptr = (char *)ptr;
+	while (total > 0)
+	{
+		*cptr = 0;
+		cptr++;
+		total--;
+	}
 	return (ptr);
 }
+
 // #include <stdio.h>
 // #include <string.h>
 // int main(void)
