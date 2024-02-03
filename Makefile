@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2024/02/04 00:04:19 by lzipp            ###   ########.fr        #
+#    Updated: 2024/02/04 00:28:18 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ CC = cc
 
 CFLAGS = -Wextra -Wall -Werror
 
-SOURCES = ft_atoi.c\
+SOURCES = $(addprefix src/,\
+ft_atoi.c\
 ft_bzero.c\
 ft_calloc.c\
 ft_isalnum.c\
@@ -30,6 +31,8 @@ ft_memcmp.c\
 ft_memcpy.c\
 ft_memmove.c\
 ft_memset.c\
+ft_safe_free.c\
+ft_free_null_term_arrs.c\
 ft_putchar_fd.c\
 ft_putendl_fd.c\
 ft_putnbr_fd.c\
@@ -57,13 +60,8 @@ get_next_line.c\
 ft_printf.c\
 ft_putchars_int.c\
 ft_puthexes_int.c\
-ft_putnbrs_int.c
-
-OBJECTS = $(SOURCES:.c=.o)
-
-INCLUDES = libft.h
-
-BONUS_SOURCES = ft_lstadd_back_bonus.c\
+ft_putnbrs_int.c\
+ft_lstadd_back_bonus.c\
 ft_lstadd_front_bonus.c\
 ft_lstclear_bonus.c\
 ft_lstdelone_bonus.c\
@@ -71,9 +69,9 @@ ft_lstiter_bonus.c\
 ft_lstlast_bonus.c\
 ft_lstmap_bonus.c\
 ft_lstsize_bonus.c\
-ft_lstnew_bonus.c\
+ft_lstnew_bonus.c)
 
-BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
+OBJECTS = $(SOURCES:.c=.o)
 
 all: $(NAME)
 
@@ -92,6 +90,3 @@ re: fclean all
 	$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: all clean fclean re
-
-bonus: $(BONUS_OBJECTS) $(OBJECTS)
-	ar -rc $(NAME) $(OBJECTS) $(BONUS_OBJECTS)

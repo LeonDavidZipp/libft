@@ -6,11 +6,16 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 20:25:27 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/04 00:05:07 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/04 00:13:23 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+
+int		sep_inside(char *str);
+int		catch_errors(int nbt, char **text);
+int		file_text(char **text, char *buffer);
+char	*next_line(char **text);
 
 char	*get_next_line(int fd)
 {

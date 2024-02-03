@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:05:51 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/04 00:05:54 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/04 00:29:41 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memset(void *b, int c, size_t len);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
+
+void			ft_safe_free(void **ptr);
+void			ft_free_2d_arr(void **arr);
+void			ft_free_3d_arr(void ***arr);
+
 int				ft_null_terminated_arr_len(void **arr);
 
 int				ft_isalnum(int c);
@@ -72,12 +77,14 @@ char			*ft_strtrim(char const *s1, char const *set);
 
 char			*get_next_line(int fd);
 
+int				ft_printf(const char *str, ...);
+int				ft_printfn(const char *str, ...);
+
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-
 int				ft_lstsize(t_list *lst);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 void			ft_lstclear(t_list **lst, void (*del)(void*));
