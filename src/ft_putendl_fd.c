@@ -6,11 +6,11 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:04 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/08 11:32:05 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/04 00:05:07 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

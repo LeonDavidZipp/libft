@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:53 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/16 16:24:02 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/04 00:05:07 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 unsigned int	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -33,19 +33,3 @@ unsigned int	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[len_dst + i] = '\0';
 	return ((unsigned int)(len_dst + len_src));
 }
-// #include <stdio.h>
-// #include <unistd.h>
-// #include <string.h>
-// int	main(void)
-// {
-// 	char	dst1[20] = "Hello";
-// 	char	dst2[20] = "Hello";
-// 	char	*src = "34njnscjsn!";
-// 	unsigned int	i = ft_strlcat(dst1, src, 20);
-// 	printf("%d\n", i);
-// 	printf("%s\n", dst1);
-// 	unsigned int	j = strlcat(dst2, src, 20);
-// 	printf("%d\n", j);
-// 	printf("%s\n", dst2);
-// 	return (0);
-// }

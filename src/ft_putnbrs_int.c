@@ -6,11 +6,11 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:51:30 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/15 08:34:58 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/04 00:05:07 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../libft.h"
 
 int	ft_putnbr_int(int n, int len)
 {

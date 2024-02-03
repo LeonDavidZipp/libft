@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrncmp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 13:00:57 by lzipp             #+#    #+#             */
-/*   Updated: 2024/01/02 13:09:19 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/04 00:05:07 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include "../libft.h"
 
 int	ft_strrncmp(const char *s1, const char *s2, size_t n)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:23 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/03 11:50:50 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/04 00:05:07 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 static int	ft_count_words(const char *s, char c)
 {
@@ -77,26 +77,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (result);
 }
-// #include <stdio.h>
-// int main() {
-//     const char *input = "This is a test string";
-//     char **result = ft_split(input, ' ');
-// 	system("leaks a.out");
-
-//     if (!result) {
-//         printf("Memory allocation error in ft_split\n");
-//         return 1;
-//     }
-
-//     // Print the split strings
-//     for (int i = 0; result[i] != NULL; i++) {
-//         printf("Token %d: %s\n", i, result[i]);
-//     }
-
-//     // Free the memory allocated by ft_split
-//     for (int i = 0; result[i] != NULL; i++) {
-//         free(result[i]);
-//     }
-//     free(result);
-//     return 0;
-// }

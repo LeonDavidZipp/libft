@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2024/02/03 23:44:37 by lzipp            ###   ########.fr        #
+#    Updated: 2024/02/04 00:04:19 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,12 @@ ft_strtrim.c\
 ft_substr.c\
 ft_tolower.c\
 ft_toupper.c\
-ft_null_terminated_arr_len.c
+ft_null_terminated_arr_len.c\
+get_next_line.c\
+ft_printf.c\
+ft_putchars_int.c\
+ft_puthexes_int.c\
+ft_putnbrs_int.c
 
 OBJECTS = $(SOURCES:.c=.o)
 

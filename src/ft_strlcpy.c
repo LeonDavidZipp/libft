@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:59 by lzipp             #+#    #+#             */
-/*   Updated: 2023/10/16 16:27:29 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/04 00:05:07 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 unsigned int	ft_strlcpy(char *dest, char *src, size_t size)
 {
@@ -36,19 +36,3 @@ unsigned int	ft_strlcpy(char *dest, char *src, size_t size)
 	}
 	return (len);
 }
-// #include <stdio.h>
-// #include <unistd.h>
-// #include <string.h>
-// int	main()
-// {
-// 	char	str1[] = "abcde78";
-// 	char	str2[6];
-// 	char	str3[6];
-// 	unsigned int	l = ft_strlcpy(&str2[0], &str1[0], 6);
-// 	unsigned int	m = strlcpy(&str3[0], &str1[0], 6);
-// 	printf("%s\n", str2);
-// 	write(1, (char[1]){l + '0'}, 1);
-// 	printf("\n");
-// 	printf("%s\n", str3);
-// 	write(1, (char[1]){m + '0'}, 1);
-// }

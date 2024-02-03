@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:48 by lzipp             #+#    #+#             */
-/*   Updated: 2023/12/08 15:17:39 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/04 00:05:07 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -40,42 +40,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result[len1 + len2] = '\0';
 	return (result);
 }
-
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
-// int	main(void)
-// {
-//     char *str1 = NULL;
-//     char *str2 = "World!";
-//     char *str3 = "";
-//     char *str4 = "12345";
-//     char *str7 = "0123456789";
-//     char *str8 = "abcdefghijklmnopqrstuvwxyz";
-//     char *str9 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//     char *str10 = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-//     char *result1 = ft_strjoin(str1, str2);
-//     char *result2 = ft_strjoin(str3, str3);
-//     char *result3 = ft_strjoin(str4, str4);
-//     char *result5 = ft_strjoin(str7, str8);
-//     char *result6 = ft_strjoin(str8, str9);
-//     char *result7 = ft_strjoin(str9, str10);
-//     char *result8 = ft_strjoin(str10, str1);
-//     char *result9 = ft_strjoin(str2, str3);
-//     char *result10 = ft_strjoin(str3, str2);
-//     printf("ft_strjoin: expected output: Hello, World! | %s\n", result1);
-//     printf("ft_strjoin: expected output:  | %s\n", result2);
-//     printf("ft_strjoin: expected output: 1234512345 | %s\n", result3);
-//     printf("ft_strjoin: expected output: World! | %s\n", result9);
-//     printf("ft_strjoin: expected output: World! | %s\n", result10);
-//     free(result1);
-//     free(result2);
-//     free(result3);
-//     free(result5);
-//     free(result6);
-//     free(result7);
-//     free(result8);
-//     free(result9);
-//     free(result10);
-//     return (0);
-// }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 11:26:57 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/03 23:50:49 by lzipp            ###   ########.fr       */
+/*   Created: 2024/02/04 00:05:51 by lzipp             #+#    #+#             */
+/*   Updated: 2024/02/04 00:05:54 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <stdarg.h>
+
+# define BUFFER_SIZE 100
 
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
@@ -67,6 +69,8 @@ int				ft_strrncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *haystack,
 					const char *needle, size_t len);
 char			*ft_strtrim(char const *s1, char const *set);
+
+char			*get_next_line(int fd);
 
 typedef struct s_list
 {
