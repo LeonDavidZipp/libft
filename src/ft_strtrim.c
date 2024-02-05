@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:33:36 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/05 18:39:05 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/05 18:40:18 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ static int	in_set(char c, char const *set)
 {
 	int	i;
 
-	i = 0;
 	if (ft_strlen(set) == 0)
 		return (0);
-	while (set[i])
+	i = -1;
+	while (set[++i])
 	{
-		if (c == set[i++])
+		if (c == set[i])
 			return (1);
 	}
 	return (0);
