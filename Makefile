@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2024/02/04 11:04:44 by lzipp            ###   ########.fr        #
+#    Updated: 2024/02/16 17:49:13 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ ft_recalloc.c \
 ft_split.c \
 ft_strchr.c \
 ft_strdup.c \
+ft_strndup.c \
 ft_striteri.c \
 ft_strjoin.c \
 ft_strlcat.c \
