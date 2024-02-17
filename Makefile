@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2024/02/16 17:49:13 by lzipp            ###   ########.fr        #
+#    Updated: 2024/02/17 11:19:44 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ ft_isalpha.c \
 ft_isascii.c \
 ft_isdigit.c \
 ft_isprint.c \
+ft_isspace.c \
 ft_itoa.c \
 ft_memchr.c \
 ft_memcmp.c \

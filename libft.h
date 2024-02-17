@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:05:51 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/16 17:53:03 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/17 11:19:35 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int				ft_isalpha(int c);
 int				ft_isascii(int c);
 int				ft_isdigit(int c);
 int				ft_isprint(int c);
+int				ft_isspace(int c);
 
 int				ft_tolower(int c);
 int				ft_toupper(int c);
