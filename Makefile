@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+         #
+#    By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2024/02/17 11:19:44 by lzipp            ###   ########.fr        #
+#    Updated: 2024/02/20 10:25:46 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,6 @@ ft_recalloc.c \
 ft_split.c \
 ft_strchr.c \
 ft_strdup.c \
-ft_strndup.c \
 ft_striteri.c \
 ft_strjoin.c \
 ft_strlcat.c \
