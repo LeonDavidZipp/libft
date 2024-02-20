@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:05:51 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/19 17:21:32 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/20 10:42:50 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
 long long		ft_power(long long base, long long exponent);
+int				ft_dec_len(long long n);
+int				ft_hex_len(unsigned long long n);
 
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t count, size_t size);
@@ -94,6 +96,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
 int				ft_lstsize(t_list *lst);
 void			ft_lstadd_front(t_list **lst, t_list *new);
 void			ft_lstclear(t_list **lst, void (*del)(void*));

@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2024/02/20 10:25:46 by lzipp            ###   ########.fr        #
+#    Updated: 2024/02/20 10:43:20 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,6 +58,7 @@ ft_substr.c \
 ft_tolower.c \
 ft_toupper.c \
 ft_null_terminated_arr_len.c \
+ft_numlens.c \
 get_next_line.c \
 ft_printf.c \
 ft_putchars_int.c \
