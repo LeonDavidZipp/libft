@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:33:36 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/05 18:40:18 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/23 20:30:29 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (front_i <= rev_i)
 		res[i++] = s1[front_i++];
+	return (res);
+}
+
+char	*ft_trim_in_place(char const *s1, char const *set)
+{
+	char	*res;
+	char	*temp;
+
+	temp = ft_strtrim(s1, set);
+	if (!temp)
+		return (NULL);
+	res = ft_strdup(temp);
+	free(temp);
 	return (res);
 }
