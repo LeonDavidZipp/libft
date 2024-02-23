@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:05:51 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/20 10:42:50 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/23 12:33:38 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, size_t size);
 size_t			ft_strlen(const char *s);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_strrncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *haystack,
