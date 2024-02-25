@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:33:56 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/04 00:05:07 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/25 20:47:35 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	res[j] = '\0';
 	return (res);
+}
+
+char	*ft_substr_in_place(char *s, unsigned int start, size_t len)
+{
+	char	*temp;
+
+	temp = ft_substr((const char *)s, start, len);
+	free(s);
+	return (temp);
 }
