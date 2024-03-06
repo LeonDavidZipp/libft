@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:48 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/04 00:05:07 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/02/25 18:26:22 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	result[len1 + len2] = '\0';
 	return (result);
+}
+
+char	*ft_join_in_place(char *s1, const char *s2)
+{
+	char	*temp;
+
+	temp = ft_strjoin(s1, s2);
+	if (!temp)
+		return (NULL);
+	free(s1);
+	s1 = ft_strdup(temp);
+	free(temp);
+	return (s1);
 }
