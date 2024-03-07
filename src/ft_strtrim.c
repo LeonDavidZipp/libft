@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:33:36 by lzipp             #+#    #+#             */
-/*   Updated: 2024/03/07 15:05:09 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/07 15:06:18 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ char	*ft_trim_in_place(char const *s1, char const *set)
 	return (res);
 }
 
-char	*ft_strntrim_in_place(char *s1, char const *set, int n)
+char	*ft_ntrim_in_place(char *s1, char const *set, int n)
 {
 	char	*res;
 	char	*temp;

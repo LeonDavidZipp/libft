@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:05:51 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/25 20:48:06 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/07 15:07:00 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,9 @@ int				ft_strrncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *haystack,
 					const char *needle, size_t len);
 char			*ft_strtrim(char const *s1, char const *set);
+char			*ft_strntrim(char const *s1, char const *set, int n);
 char			*ft_trim_in_place(char const *s1, char const *set);
+char			*ft_ntrim_in_place(char *s1, char const *set, int n);
 
 char			*get_next_line(int fd);
 char			*get_next_line_no_nl(int fd);
