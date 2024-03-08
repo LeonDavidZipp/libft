@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:33:36 by lzipp             #+#    #+#             */
-/*   Updated: 2024/03/07 15:06:18 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/08 18:31:13 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,27 +83,18 @@ char	*ft_strntrim(char const *s1, char const *set, int n)
 
 char	*ft_trim_in_place(char const *s1, char const *set)
 {
-	char	*res;
-	char	*temp;
+	char	*result;
 
-	temp = ft_strtrim(s1, set);
-	if (!temp)
-		return (NULL);
-	res = ft_strdup(temp);
-	free(temp);
-	return (res);
+	result = ft_strtrim(s1, set);
+	free(s1)
+	return (result);
 }
 
 char	*ft_ntrim_in_place(char *s1, char const *set, int n)
 {
-	char	*res;
-	char	*temp;
+	char	*result;
 
-	temp = ft_strntrim(s1, set, n);
-	if (!temp)
-		return (NULL);
-	res = ft_strdup(temp);
-	free(temp);
-	free(s1);
-	return (res);
+	result = ft_strntrim(s1, set, n);
+	free(s1)
+	return (result);
 }
