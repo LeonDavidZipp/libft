@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:33:36 by lzipp             #+#    #+#             */
-/*   Updated: 2024/03/08 18:31:13 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/08 18:33:37 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ char	*ft_trim_in_place(char const *s1, char const *set)
 	char	*result;
 
 	result = ft_strtrim(s1, set);
-	free(s1)
+	free(s1);
 	return (result);
 }
 
@@ -95,6 +95,6 @@ char	*ft_ntrim_in_place(char *s1, char const *set, int n)
 	char	*result;
 
 	result = ft_strntrim(s1, set, n);
-	free(s1)
+	free(s1);
 	return (result);
 }
