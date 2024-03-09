@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:33:36 by lzipp             #+#    #+#             */
-/*   Updated: 2024/03/09 10:48:00 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/09 14:08:56 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,9 @@ char	*ft_strntrim(char const *s1, char const *set, int n)
 	front_i = 0;
 	rev_i = ft_strlen(s1) - 1;
 	front_n = n;
-	while (s1[front_i] && in_set(s1[front_i], set) && front_n--)
+	while (s1[front_i] && in_set(s1[front_i], set) && front_n-- > 0)
 		front_i++;
-	while (rev_i > 0 && s1[rev_i] && in_set(s1[rev_i], set) && n--)
+	while (rev_i > 0 && s1[rev_i] && in_set(s1[rev_i], set) && n-- > 0)
 		rev_i--;
 	res = (char *)ft_calloc(rev_i + 2 - front_i, sizeof(char));
 	if (!res)
