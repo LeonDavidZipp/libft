@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:05:51 by lzipp             #+#    #+#             */
-/*   Updated: 2024/03/07 15:07:00 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/22 13:23:11 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <stdarg.h>
+# include <stdbool.h>
 
 # define BUFFER_SIZE 100
 # define OPEN_MAX 10240
@@ -114,5 +115,9 @@ t_list			*ft_lstlast(t_list *lst);
 t_list			*ft_lstnew(void *content);
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
+void			ft_lstreverse(t_list **head);
+
+void			ft_reverse_sublist(t_list **before_start, t_list **start,
+					t_list **after_end);
 
 #endif

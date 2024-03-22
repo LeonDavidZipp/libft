@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+         #
+#    By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2024/02/25 20:22:31 by lzipp            ###   ########.fr        #
+#    Updated: 2024/03/20 14:57:18 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,8 @@ ft_lstiter_bonus.c \
 ft_lstlast_bonus.c \
 ft_lstmap_bonus.c \
 ft_lstsize_bonus.c \
-ft_lstnew_bonus.c)
+ft_lstnew_bonus.c \
+ft_lstreverse.c)
 
 OBJECTS = $(SOURCES:.c=.o)
 
