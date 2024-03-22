@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:30:04 by lzipp             #+#    #+#             */
-/*   Updated: 2024/03/22 13:27:26 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/22 14:17:04 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,13 @@ bool	ft_str_isdigit(char *str)
 		str++;
 	}
 	return (true);
+}
+
+bool	ft_str_isnumber(char *str)
+{
+	if (!str)
+		return (false);
+	if (*str == '-' || *str == '+')
+		str++;
+	return (ft_str_isdigit(str));
 }
