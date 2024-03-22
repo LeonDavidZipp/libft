@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2024/03/22 16:47:29 by lzipp            ###   ########.fr        #
+#    Updated: 2024/03/22 16:56:23 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ ft_atoi.c \
 ft_power.c \
 ft_bzero.c \
 ft_calloc.c \
+ft_fprintf.c \
 ft_isalnum.c \
 ft_isalpha.c \
 ft_isascii.c \

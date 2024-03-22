@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:05:51 by lzipp             #+#    #+#             */
-/*   Updated: 2024/03/22 16:46:36 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/22 16:56:37 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ char			*get_next_line(int fd);
 char			*get_next_line_no_nl(int fd);
 
 int				ft_printf(const char *str, ...);
+int				ft_fprintf(int fd, const char *str, ...);
 int				ft_printfn(const char *str, ...);
 
 typedef struct s_list

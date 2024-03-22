@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 14:06:54 by leon              #+#    #+#             */
-/*   Updated: 2024/03/22 16:46:03 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/22 16:58:14 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,33 @@ int	ft_fprintf(int fd, const char *str, ...)
 		len += worked;
 	}
 	va_end(args);
+	return (len + 1);
+}
+
+int	ft_fprintfn(int fd, const char *str, ...)
+{
+	va_list	args;
+	int		i;
+	int		len;
+	int		worked;
+
+	i = 0;
+	len = 0;
+	va_start(args, str);
+	while (str[i])
+	{
+		if (str[i] != '%')
+			worked = ft_putchar_int_fd(str[i++], fd);
+		else
+		{
+			worked = ft_convert(&args, str[i + 1], fd);
+			i += 2;
+		}
+		if (worked == -1)
+			return (-1);
+		len += worked;
+	}
+	va_end(args);
+	write(fd, "\n", 1);
 	return (len + 1);
 }
