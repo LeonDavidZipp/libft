@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:05:51 by lzipp             #+#    #+#             */
-/*   Updated: 2024/03/22 14:17:19 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/22 16:46:36 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,15 +64,22 @@ int				ft_tolower(int c);
 int				ft_toupper(int c);
 void			ft_putchar_fd(char c, int fd);
 int				ft_putchar_int(const char c);
+int				ft_putchar_int_fd(const char c, int fd);
 int				ft_putstr_int(const char *s);
+int				ft_putstr_int_fd(const char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char const *s, int fd);
 int				ft_putnbr_int(int n, int len);
+int				ft_putnbr_int_fd(int n, int len, int fd);
 int				ft_putu_int(unsigned int n, int len);
+int				ft_putu_int_fd(unsigned int n, int len, int fd);
 int				ft_puthex_big_int(unsigned int n, int len);
+int				ft_puthex_big_int_fd(unsigned int n, int len, int fd);
 int				ft_puthex_small_int(unsigned int n, int len);
+int				ft_puthex_small_int_fd(unsigned int n, int len, int fd);
 int				ft_putpointer_int(unsigned long n, int len);
+int				ft_putpointer_int_fd(unsigned long n, int len, int fd);
 
 char			**ft_split(char const *s, char c);
 char			*ft_strchr(const char *s, int c);

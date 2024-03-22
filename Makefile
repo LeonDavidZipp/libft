@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2024/03/20 14:57:18 by lzipp            ###   ########.fr        #
+#    Updated: 2024/03/22 16:47:29 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,6 +63,7 @@ ft_numlens.c \
 get_next_line.c \
 get_next_line_no_nl.c \
 ft_printf.c \
+ft_puthexes_int_fd.c \
 ft_putchars_int.c \
 ft_puthexes_int.c \
 ft_putnbrs_int.c \
