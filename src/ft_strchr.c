@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:32 by lzipp             #+#    #+#             */
-/*   Updated: 2024/03/22 13:22:08 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/23 13:06:53 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	int		i;
 
 	if (!s)
 		return (NULL);
@@ -47,7 +47,7 @@ char	*ft_strchr(const char *s, int c)
 
 char	*ft_strchr_till(const char *s, int c, int end)
 {
-	int i;
+	int		i;
 
 	if (!s || end < 0)
 		return (NULL);
@@ -65,7 +65,7 @@ char	*ft_strchr_till(const char *s, int c, int end)
 
 char	*ft_strchr_from(const char *s, int c, int start)
 {
-	int i;
+	int		i;
 
 	if (!s || start < 0)
 		return (NULL);
