@@ -3,34 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:30:17 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/04 00:05:07 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/23 12:10:15 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-
-static int	ft_numlen(long nb)
-{
-	int	len;
-
-	len = 0;
-	if (nb == 0)
-		return (1);
-	else if (nb < 0)
-	{
-		nb *= -1;
-		len++;
-	}
-	while (nb > 0)
-	{
-		len++;
-		nb /= 10;
-	}
-	return (len);
-}
 
 char	*ft_itoa(int n)
 {
@@ -40,7 +20,7 @@ char	*ft_itoa(int n)
 	int		start;
 
 	nb = (long) n;
-	len = ft_numlen(nb) + 1;
+	len = ft_numlen(nb, 10) + 1;
 	start = (nb < 0);
 	if (nb < 0)
 		nb *= -1;

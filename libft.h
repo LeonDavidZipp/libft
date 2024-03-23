@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:05:51 by lzipp             #+#    #+#             */
-/*   Updated: 2024/03/22 17:31:16 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/23 12:19:12 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,14 @@
 
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
+char			*ft_numtoa(long long n, int base);
+char			*ft_hextoa_big(long long n);
+char			*ft_pointertoa(unsigned long long n);
 long long		ft_power(long long base, long long exponent);
+int				ft_numlen(long long n, int base);
 int				ft_dec_len(long long n);
 int				ft_hex_len(unsigned long long n);
+int				ft_pointer_len(unsigned long long n);
 
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t count, size_t size);
@@ -88,7 +93,7 @@ char			*ft_strrchr(const char *s, int c);
 char			*ft_strdup(const char *s1);
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			*ft_strjoin(char const *s1, char const *s2);
-char			*ft_join_in_place(char *s1, const char *s2);
+char			*ft_join_in_place(char *s1, char *s2);
 unsigned int	ft_strlcat(char *dst, const char *src, size_t dstsize);
 unsigned int	ft_strlcpy(char *dest, char *src, size_t size);
 size_t			ft_strlen(const char *s);

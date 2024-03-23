@@ -6,64 +6,72 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 18:12:22 by lzipp             #+#    #+#             */
-/*   Updated: 2024/03/22 18:37:25 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/23 13:03:52 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char	*ft_sprintf(const char *str, ...)
+static char		*ft_convert(va_list *args, char c);
+static void		assign_vars(int *i, char **result);
+
+char	*ft_sprintf(char *str, ...)
 {
 	va_list		args;
-	int			len;
 	char		*result;
 	char		*temp;
+	char		curr_char[2];
 	int			i;
 
 	va_start(args, str);
-	i = 0;
-	result = NULL;
-	while (str[i])
+	assign_vars(&i, &result);
+	while (str[++i])
 	{
 		if (str[i] != '%')
-			result = ft_join_in_place(result, str[i]);
+		{
+			curr_char[0] = str[i];
+			curr_char[1] = '\0';
+			result = ft_join_in_place(result, curr_char);
+		}
 		else
 		{
-			temp = ft_convert(&args, str[i + 1]);
+			temp = ft_convert(&args, str[++i]);
 			result = ft_join_in_place(result, temp);
 			free(temp);
-			i += 2;
 		}
 	}
 	va_end(args);
 	return (result);
 }
 
-static int	ft_convert(va_list *args, char c)
+static void	assign_vars(int *i, char **result)
 {
-	char	*s;
+	*i = -1;
+	*result = NULL;
+}
+
+static char	*ft_convert(va_list *args, char c)
+{
+	char	temp[2];
 
 	if (c == 'c')
-		return (ft_strdup(va_arg(*args, char)));
-	else if (c == 's')
 	{
-		s = va_arg(*args, char *);
-		if (s == NULL)
-			s = "(null)";
-		return (ft_strdup(va_arg(*args, char *)));
+		temp[0] = (char)va_arg(*args, int);
+		temp[1] = '\0';
+		return (ft_strdup(temp));
 	}
-	else if (c == 'd' || c == 'i')
-		return (ft_putnbr_int(va_arg(*args, int), 0));
-	else if (c == 'u')
-		return (ft_putu_int(va_arg(*args, unsigned int), 0));
+	else if (c == 's')
+		return (ft_strdup(va_arg(*args, char *)));
+	else if (c == 'd' || c == 'i' || c == 'u')
+		return (ft_numtoa(va_arg(*args, long long), 10));
 	else if (c == 'x')
-		return (ft_puthex_small_int(va_arg(*args, unsigned int), 0));
+		return (ft_numtoa(va_arg(*args, long long), 16));
 	else if (c == 'X')
-		return (ft_puthex_big_int(va_arg(*args, unsigned int), 0));
+		return (ft_hextoa_big(va_arg(*args, long long)));
 	else if (c == 'p')
-		return (ft_putpointer_int(va_arg(*args, unsigned long), 0));
+		return (ft_pointertoa(va_arg(*args, unsigned long)));
 	else if (c == '%')
-		return (ft_putchar_int('%'));
+		return (ft_strdup("%"));
 	else
-		return (-1);
+		return (ft_strdup(""));
 }
