@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:05:51 by lzipp             #+#    #+#             */
-/*   Updated: 2024/03/23 13:05:12 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/03/23 17:05:30 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int				ft_isdigit(int c);
 int				ft_isprint(int c);
 int				ft_isspace(int c);
 
+bool			ft_str_isalnum(char *str);
 bool			ft_str_isalpha(char *str);
 bool			ft_str_isdigit(char *str);
 bool			ft_str_isnumber(char *str);
