@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2024/03/23 13:18:26 by lzipp            ###   ########.fr        #
+#    Updated: 2024/03/25 15:10:49 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SOURCES = $(addprefix src/, \
 ft_atoi.c \
 ft_bzero.c \
 ft_calloc.c \
+ft_count_char.c \
 ft_fprintf.c \
 ft_free_null_term_arrs.c \
 ft_isalnum.c \
