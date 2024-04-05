@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2024/03/25 15:10:49 by lzipp            ###   ########.fr        #
+#    Updated: 2024/04/05 17:14:31 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ ft_lstmap_bonus.c \
 ft_lstnew_bonus.c \
 ft_lstreverse.c \
 ft_lstsize_bonus.c \
+ft_max_min.c \
 ft_memchr.c \
 ft_memcmp.c \
 ft_memcpy.c \

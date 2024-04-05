@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:05:51 by lzipp             #+#    #+#             */
-/*   Updated: 2024/04/05 13:39:33 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/04/05 17:14:10 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,9 @@ int				ft_printfn(const char *str, ...);
 int				ft_fprintf(int fd, const char *str, ...);
 int				ft_fprintfn(int fd, const char *str, ...);
 char			*ft_sprintf(char *str, ...);
+
+int				ft_max(int a, int b);
+int				ft_min(int a, int b);
 
 typedef struct s_list
 {
