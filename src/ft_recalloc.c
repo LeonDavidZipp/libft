@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_recalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 15:22:54 by lzipp             #+#    #+#             */
-/*   Updated: 2024/02/04 00:05:07 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/04/05 13:12:55 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_recalloc(void *ptr, size_t len, size_t data_size)
 	void	*new_ptr;
 
 	if (!ptr)
-		return (ft_calloc(len, data_size));
-	if (len == 0 && ptr)
+		return (ft_calloc(len + 1, data_size));
+	if (len == 0)
 	{
 		free(ptr);
 		return (malloc(0));
