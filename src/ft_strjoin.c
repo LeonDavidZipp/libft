@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 11:32:48 by lzipp             #+#    #+#             */
-/*   Updated: 2024/03/23 18:32:59 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/04/06 15:20:21 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 char	*ft_join_in_place(char *s1, char *s2)
 {
-	char	*temp;
+	char	*result;
 
-	temp = ft_strjoin(s1, s2);
-	if (!temp)
-		return (NULL);
+	result = ft_strjoin(s1, s2);
 	free(s1);
-	s1 = ft_strdup(temp);
-	free(temp);
-	return (s1);
+	return (result);
 }
