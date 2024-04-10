@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 19:14:44 by lzipp             #+#    #+#              #
-#    Updated: 2024/04/05 17:14:31 by lzipp            ###   ########.fr        #
+#    Updated: 2024/04/10 17:21:13 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,6 +63,7 @@ ft_recalloc.c \
 ft_safe_free.c \
 ft_split.c \
 ft_sprintf.c \
+ft_str_includes_only.c \
 ft_strchr.c \
 ft_strcmp.c \
 ft_strdup.c \
