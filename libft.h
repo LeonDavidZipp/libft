@@ -6,7 +6,7 @@
 /*   By: lzipp <lzipp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 00:05:51 by lzipp             #+#    #+#             */
-/*   Updated: 2024/04/05 17:14:10 by lzipp            ###   ########.fr       */
+/*   Updated: 2024/04/10 17:08:30 by lzipp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,7 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_strrncmp(const char *s1, const char *s2, size_t n);
+bool			ft_str_includes_only(char *str, char *charset);
 char			*ft_strnstr(const char *haystack,
 					const char *needle, size_t len);
 char			*ft_strtrim(char const *s1, char const *set);
